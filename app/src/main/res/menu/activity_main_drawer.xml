@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/group_main" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_order" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_address"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_address" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_payment_method" />
+        <item
+            android:id="@+id/nav_voucher"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_voucher" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_customer_service" />
+        <item
+            android:id="@+id/nav_invite"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_invite" />
+    </group>
+
+    <group android:id="@+id/group_set" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_setting"
+            android:title="@string/menu_setting" />
+        <item
+            android:id="@+id/nav_share"
+            android:title="@string/menu_terms_conditions" />
+        <item
+            android:id="@+id/nav_send"
+            android:title="@string/menu_logout" />
+    </group>
+
+</menu>
