@@ -10,4 +10,8 @@ class SlideshowViewModel : ViewModel() {
         value = "This is slideshow Fragment"
     }
     val text: LiveData<String> = _text
+
+    fun readData(){
+        _text.value = "ddd"
+    }
 }
