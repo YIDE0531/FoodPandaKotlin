@@ -12,5 +12,6 @@
     <color name="foodpanda_while">#ffffff</color>
     <color name="foodpanda_black">#FF000000</color>
     <color name="foodpanda_block">#FDF1F5</color>
-
+    <color name="foodpanda_default_text_color">#808080</color>
+    <color name="android_default_background">#FAFAFA</color>
 </resources>

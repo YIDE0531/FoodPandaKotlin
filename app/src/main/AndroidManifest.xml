@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nuu.foodpanda">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/foodpanda_icon"
@@ -9,22 +12,38 @@
         android:roundIcon="@mipmap/foodpanda_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodPanda">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.FoodPanda.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FoodPanda.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.FoodPanda.NoActionBar"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FoodPanda.NoActionBar" />
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FoodPanda.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FoodPanda.NoActionBar" />
+        <activity
+            android:name=".OrderCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FoodPanda.NoActionBar" />
     </application>
+
 </manifest>

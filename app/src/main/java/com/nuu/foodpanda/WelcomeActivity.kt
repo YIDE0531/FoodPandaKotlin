@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.nuu.foodpanda.databinding.ActivityWelcomeBinding
+import com.nuu.foodpanda.util.SystemUtility
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
@@ -37,7 +38,9 @@ class WelcomeActivity : AppCompatActivity() {
         mSet.start()
         countDownTimer = object : CountDownTimer(2000, 1000) {
             override fun onFinish() {
-                startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
+                val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
             }
             override fun onTick(millisUntilFinished: Long) {}
         }.start()
